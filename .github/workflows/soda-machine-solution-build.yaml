@@ -17,6 +17,6 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore SodaMachine/SodaMachine.csproj
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build SodaMachine/SodaMachine.csproj --configuration Release --no-restore
